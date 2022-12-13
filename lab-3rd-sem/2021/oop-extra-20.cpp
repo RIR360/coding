@@ -1,4 +1,12 @@
 /*
+------------------------------------------------
+| Prepared for you with ❤ by Rahin and Rizvy. |
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+| Follow the oop lab sample before writing.    |
+------------------------------------------------
+*/
+
+/*
 (oop-extra-1) - Rizvy
 Question: Write a c++ program to define all data type variables and assign user inputs
 */
@@ -639,3 +647,233 @@ The reversed array is: { 7, 6, 4, 2, 1 }
 --------------------------------------
 */
 
+/*
+(oop-extra-16) - Rahin
+Question: Write C++ program to put even and odd elements of array in two separate array.
+*/
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int i, n, item,e=0,o=0;
+
+     cout<<"Enter the size of the array: ";
+     cin>>n;
+
+     int arr[n],odd[n],even[n];
+     
+     cout<<"Enter the array: ";
+     for(i = 0; i < n; i++)  
+        cin>>arr[i];
+        
+     for(i = 0; i < n; i++){
+        if(arr[i] % 2 == 0){
+            even[e]=arr[i];
+            e++;
+        } else{
+            odd[o]=arr[i];
+            o++;
+        }
+     }
+     
+     cout<<"The Even array is: ";
+     for(i=0;i<e;i++){
+        cout<< even[i] <<" ";
+     }
+     cout<<endl;
+     
+     cout<<"The Odd array is: ";
+     for(i=0;i<o;i++){
+        cout<< odd[i] <<" ";
+     }
+     cout<<endl;
+     return 0;
+}
+/*
+Output:
+--------------------------------------
+Enter the size of the array: 5
+Enter the array: 1 3 5 2 5
+The Even array is: 2 
+The Odd array is: 1 3 5 5 
+--------------------------------------
+*/
+
+/*
+(oop-extra-17) - Rahin
+Question: Write a program to print the circumference and area of a circle of radius entered by user by defining your own function.
+*/
+#include<iostream>
+#define pi 3.1416 
+
+using namespace std;
+
+void circle(int r){
+    cout<<"The area of the circle is: "<< pi * r * r<<endl;
+    cout<<"The circumference of the circle is: "<< 2 * pi * r<<endl;
+}
+
+int main()
+{
+    int radius;
+    cout<<"Enter the radius: ";
+    cin>>radius;
+    circle(radius);
+    return 0;
+}
+/*
+Output:
+--------------------------------------
+Enter the radius: 5
+The area of the circle is: 78.54
+The circumference of the circle is: 31.416
+--------------------------------------
+*/
+
+/*
+(oop-extra-18) - Rahin
+Question: Write a Program to print the Fibonacci sequence of a number using functions.
+*/
+#include<iostream>
+using namespace std;
+
+
+void fibonacci(int n){
+    int x=0,y=1,z;
+    if(n==1){
+        cout<<"0 ";
+    }
+    else if(n==2){
+        cout<<"0 1 ";
+    }
+    else{
+        printf("0  1 ");
+        for(int i=1;i<n-1;i++)
+        {
+            printf(" %d ",x+y);
+            z=y;
+            y=x+y;
+            x=z;
+        }
+    }
+}
+
+int main()
+{
+    int n;
+    cout<<"How many fibonacci do you want: ";
+    cin>>n;
+    cout<<"The Fibonacci series is: ";
+    fibonacci(n);
+}
+/*
+Output:
+--------------------------------------
+How many fibonacci do you want: 5
+The Fibonacci series is: 0  1  1  2  3
+--------------------------------------
+*/
+
+/*
+(oop-extra-19) - Rizvy
+Question: Write a program to find the factorial of a given number by using a function.
+*/
+#include <iostream>  
+using namespace std;
+
+void factorial(int n) {
+    int fact = 1;
+    for(int i=1;i<=n;i++) {
+        fact=fact*i;
+    }
+    cout<<"Factorial of " <<n<<" is: "<<fact<<endl;
+}
+
+int main()  
+{  
+    int number;
+    cout<<"Enter any Number: ";    
+    cin>>number;
+    
+    factorial(number);
+    
+    return 0;  
+}
+/*
+Output:
+--------------------------------------
+Enter any Number: 5
+Factorial of 5 is: 120
+--------------------------------------
+*/
+
+/*
+(oop-extra-20) - Rizvy
+Question: Write a program in C++ to print Floyd’s Triangle by using the friend function.
+*/
+#include<iostream>
+using namespace std;
+class Floyds
+{
+	public:
+		int i,j,p,q,n;
+		public:
+		int getRow()
+		{
+			cout<<"enter no.of rows: ";
+			cin>>n;
+		}
+		friend int show(Floyds);
+};
+
+int visualize(Floyds a)
+{
+	for(a.i=1;a.i<=a.n;a.i++)
+	{
+		if(a.i%2==0)
+		{
+			a.p=1;
+			a.q=0;
+		}
+		else
+		{
+			a.p=0;
+			a.q=1;
+		}
+		for(a.j=1;a.j<=a.i;a.j++)
+		{
+			if(a.j%2==0)
+			{
+				cout<<a.p;
+			}
+			else
+			{
+				cout<<a.q;
+			}
+		}
+		cout<<endl;
+	}
+}
+
+int main()
+{
+	Floyds triangle;
+	triangle.getRow();
+	visualize(triangle);
+}
+
+/*
+Output:
+--------------------------------------
+enter no.of rows: 8
+1
+01
+101
+0101
+10101
+010101
+1010101
+01010101
+--------------------------------------
+*/
