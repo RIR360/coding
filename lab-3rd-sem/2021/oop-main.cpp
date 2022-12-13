@@ -1,7 +1,7 @@
 // Follow oop lab sample before writing your report
 
 /*
-(lab-6)
+(oop-main-6)
 Questions: Create a class float that contains one float data number. Overload all the four arithmetic operators for two objects
 */
 #include <iostream>
@@ -59,7 +59,6 @@ int main()
 }
 
 /*
-
 Output:
 --------------------------------------
 | Addition: 3.8
@@ -67,8 +66,6 @@ Output:
 | Multiplication: 3.25
 | Division: 1.92308
 --------------------------------------
-
-lab-6 ends
 */
 
 
