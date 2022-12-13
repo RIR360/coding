@@ -449,3 +449,124 @@ The string is a phalindrome!
 --------------------------------------
 */
 
+/*
+(oop-extra-11) - Rahin
+Question: Write C++ program to find LCM of two numbers.
+*/
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n1, n2, max;
+    cout<<"Enter two positive numbers: ";
+    cin>>n1>>n2;
+    max = (n1 > n2) ? n1 : n2;
+    while(1){
+        if(max%n1==0 && max%n2==0){
+            printf("The LCM of %d and %d is: %d",n1,n2,max);
+            break;
+        }
+        max++;
+    }
+    return 0;
+}
+/*
+Output:
+--------------------------------------
+Enter two positive numbers: 12 23
+The LCM of 12 and 23 is: 276
+--------------------------------------
+*/
+
+/*
+(oop-extra-12) - Rizvy
+Question: Write C++ program to find prime numbers in given range using functions.
+*/
+#include <iostream>
+using namespace std;
+
+void primes(int low, int high) {
+    
+    int i, j;
+    bool prime;
+    
+    cout << "Prime numbers between " << low << " to " << high << ":\n";
+    for (i = low; i <= high; i++) {
+        
+        if (i == 1 || i == 0)
+            continue;
+ 
+        prime = true;
+ 
+        for (j = 2; j <= i / 2; ++j) {
+            if (i % j == 0) {
+                prime = false;
+                break;
+            }
+        }
+        
+        if (prime)
+            cout << i << " ";
+    }
+}
+
+int main()
+{
+    int a, b;
+    cout << "Enter two integers (range): ";
+    cin >> a >> b;
+    
+    primes(a, b);
+    
+    return 0;
+}
+
+/*
+Output:
+--------------------------------------
+Enter two integers (range): 0 10
+Prime numbers between 0 to 10: 2 3 5 7 
+--------------------------------------
+*/
+
+/*
+(oop-extra-13) - Rizvy
+Question: Write C++ program to find reverse of a number using recursion.
+*/
+#include <bits/stdc++.h>
+using namespace std;
+
+void reverse(int n)
+{
+
+   if (n < 10) {
+      cout<<n;
+      return;
+   }
+
+   else{
+      cout << n % 10;
+      reverse(n / 10);
+   }
+}
+
+
+int main()
+{
+   int n;
+   cout << "Enter a number to reverse: ";
+   cin >> n;
+   
+   cout << "Reversed: ";
+   reverse(n);
+   return 0;
+}
+/*
+Output:
+--------------------------------------
+Enter a number to reverse: 132
+Reversed: 231
+--------------------------------------
+*/
+
+
