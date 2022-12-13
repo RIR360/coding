@@ -569,4 +569,73 @@ Reversed: 231
 --------------------------------------
 */
 
+/*
+(oop-extra-14) - Rahin
+Question: Write C++ program to find factorial of a number using recursion.
+*/
+#include <iostream>
+using namespace std;
+
+int factorial(int num);
+
+int main()
+{
+    int num, fact;
+    cout<<"Enter a number: ";
+    cin>>num;
+    fact = factorial(num);
+    printf("The factorial of %d is: %d\n",num,fact);
+}
+
+int factorial(int num){
+    if(num!=1){
+        return num*factorial(num-1);
+    }
+    else{
+        return num;
+    }
+}
+/*
+Output:
+--------------------------------------
+Enter a number: 5
+The factorial of 5 is: 120
+--------------------------------------
+*/
+
+/*
+(oop-extra-15) - Rahin
+Question: Write C++ program to find reverse of an array.
+*/
+ #include <iostream>
+ using namespace std;
+
+ int main()
+ {
+     int i, n;
+
+     cout<<"Enter the size of the array: ";
+     cin>>n;
+     
+     int arr[n];
+     cout<<"Enter the array: ";
+     for(i = 0; i < n; i++)  
+        cin>>arr[i];
+
+    cout<<"The reversed array is: { ";
+    for(i=n-1; i>=0; i--){
+        cout<<arr[i];
+        if(i!=0)cout<<", ";
+    }
+    cout<<" }";
+    return 0;
+ }
+/*
+Output:
+--------------------------------------
+Enter the size of the array: 5
+Enter the array: 1 2 4 6 7
+The reversed array is: { 7, 6, 4, 2, 1 }
+--------------------------------------
+*/
 
