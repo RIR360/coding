@@ -265,48 +265,6 @@ Case Swapped: AMARpassword
 --------------------------------------
 */
 
-/*
-(oop-extra-6) - Rizvy
-Question: Write a c++ program that swaps the case of string input taken from user
-*/
-#include <iostream>
-using namespace std;
-
-int main() {
-  
-  string str;
-  int n, i;
-  
-  cout << "Enter a string: ";
-  cin >> str;
-  
-  n = 0;
-  while(str[n] != '\0') n++;
-  
-  cout << "Case Swapped: ";
-  
-  for (i = 0; i < n; i++) {
-    
-    int letter = int(str[i]);
-    if (letter >= 97)
-      cout << char(letter - 32);
-    else 
-      cout << char(letter + 32);
-    
-  }
-  
-
-  return 0;
-}
-
-
-/*
-Output:
---------------------------------------
-Enter a string: amarPASSWORD
-Case Swapped: AMARpassword
---------------------------------------
-*/
 
 /*
 (oop-extra-7) - Rahin
@@ -486,7 +444,7 @@ Output:
 Enter a string: hello
 The string is not a phalindrome!
 
-Enter a string: moon
+Enter a string: moom
 The string is a phalindrome!
 --------------------------------------
 */
