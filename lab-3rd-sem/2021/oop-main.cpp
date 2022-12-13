@@ -2,8 +2,9 @@
 
 /*
 (oop-main-6)
-Questions: Create a class float that contains one float data number. Overload all the four arithmetic operators for two objects
+Question: Create a class float that contains one float data number. Overload all the four arithmetic operators for two objects
 */
+
 #include <iostream>
 using namespace std;
 
@@ -61,10 +62,10 @@ int main()
 /*
 Output:
 --------------------------------------
-| Addition: 3.8
-| Subtraction: 1.2
-| Multiplication: 3.25
-| Division: 1.92308
+Addition: 3.8
+Subtraction: 1.2
+Multiplication: 3.25
+Division: 1.92308
 --------------------------------------
 */
 
