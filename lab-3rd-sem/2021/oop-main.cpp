@@ -1,6 +1,9 @@
 // Follow oop lab sample before writing your report
 
-// Create a class float that contains one float data number. Over load all the four arithmetic operators for two objects (lab-6)
+/*
+(lab-6)
+Questions: Create a class float that contains one float data number. Over load all the four arithmetic operators for two objects
+*/
 #include <iostream>
 using namespace std;
 
