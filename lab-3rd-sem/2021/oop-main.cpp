@@ -1,4 +1,4 @@
-// write your code with question name and output
+// Follow oop lab sample before writing your report
 
 // Create a class float that contains one float data number. Over load all the four arithmetic operators for two objects (lab-6)
 #include <iostream>
@@ -55,4 +55,19 @@ int main()
     return 0;
 }
 
-// lab-6 end
+/*
+
+Output:
+--------------------------------------
+| Addition: 3.8
+| Subtraction: 1.2
+| Multiplication: 3.25
+| Division: 1.92308
+--------------------------------------
+
+lab-6 ends
+*/
+
+
+
+
