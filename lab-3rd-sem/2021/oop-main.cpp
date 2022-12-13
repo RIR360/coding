@@ -2,7 +2,7 @@
 
 /*
 (lab-6)
-Questions: Create a class float that contains one float data number. Over load all the four arithmetic operators for two objects
+Questions: Create a class float that contains one float data number. Overload all the four arithmetic operators for two objects
 */
 #include <iostream>
 using namespace std;
