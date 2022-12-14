@@ -1,7 +1,7 @@
 // Follow oop lab sample before writing your report
 
 /*
-(oop-main-6)
+(oop-main-6) - Rizvy
 Question: Create a class float that contains one float data number. Overload all the four arithmetic operators for two objects
 */
 
@@ -69,6 +69,58 @@ Division: 1.92308
 --------------------------------------
 */
 
+/*
+(oop-main-7) - Rizvy
+Question: Write lab question here
+*/
+#include <iostream>
+using namespace std;
+
+class area_cl {
+    public:
+    double height;
+    double width;
+    area_cl (double width, double height) {
+        this->height = height;
+        this->width = width;
+    }
+};
+
+class rectangle : public area_cl {
+    public:
+    rectangle(double width, double height) : area_cl(width, height) {}
+    double area() {
+        return height * width;
+    }
+};
+
+class isosceles : public area_cl {
+    public:
+    isosceles(double width, double height) : area_cl(width, height) {}
+    double area() {
+        return (height * width) / 2;
+    }
+};
+
+
+int main()
+{
+    rectangle a(3.234, 5.3);
+    isosceles b(3.234, 5.3);
+    
+    cout << "Rectangle Area: " << a.area() << endl;
+    cout << "Isosceles Area: " << b.area() << endl;
+
+    return 0;
+}
+
+/*
+Output:
+--------------------------------------
+Rectangle Area: 17.1402
+Isosceles Area: 8.5701
+--------------------------------------
+*/
 
 
 
