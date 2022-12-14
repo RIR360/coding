@@ -183,5 +183,92 @@ Area of Cube: 8159.57
 --------------------------------------
 */
 
+/*
+(oop-main-9) - Rizvy
+Question: Write a program to read two files simultaneously.
+*/
+#include <iostream>
+#include <fstream>
+using namespace std;
 
+int main() {
+
+    string line1, line2;
+    ifstream names("names.txt");
+    ifstream scores("scores.txt");
+
+    while(getline(names, line1)) {
+        getline(scores, line2);
+        cout << line1 << ", " << line2 << endl;
+    }
+
+    scores.close();
+    names.close();
+    return 0;
+}
+
+/*
+Output:
+--------------------------------------
+File: names.txt
+Name, ID
+Price, 1
+Soap, 2
+Roch, 3
+Goast, 4
+Gaz, 5
+
+File: scores.txt
+Score
+90
+89
+82
+95
+80
+
+Terminal:
+Name, ID, Score
+Price, 1, 90
+Soap, 2, 89
+Roch, 3, 82
+Goast, 4, 95
+Gaz, 5, 80
+--------------------------------------
+*/
+
+/*
+(oop-main-10) - Rizvy
+Question: Write lab question here
+*/
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+
+    char ch;
+    ifstream source("source.txt");
+    ofstream output("output.txt");
+
+    while(source >> ch) output << ch;
+
+    cout << "Output file is written.";
+
+    output.close();
+    source.close();
+    return 0;
+}
+/*
+Output:
+--------------------------------------
+File: source.txt
+The       quick           brown fox 
+
+jumps 		over    the 
+   lazy 			dog.
+
+File: output.txt
+Thequickbrownfoxjumpsoverthelazydog.
+--------------------------------------
+*/
 
