@@ -122,5 +122,66 @@ Isosceles Area: 8.5701
 --------------------------------------
 */
 
+/*
+(oop-main-8) - Rizvy
+Question: Write lab question here
+*/
+#include <iostream>
+using namespace std;
+
+class shape {
+    public:
+    virtual void print() = 0;
+};
+
+class rectangle : public shape {
+    double length, width;
+    public:
+    rectangle(double length, double width) {
+        this->length = length;
+        this->width = width;
+    }
+    double area(double l, double w) {
+        return l * w;
+    }
+    void print() {
+        cout << "Area of rectangle: " << area(length, width) << endl;
+    }
+};
+
+
+class cube : public shape {
+    double length;
+    public:
+    cube (double length) {
+        this->length = length;
+    }
+    double area(double l) {
+        return l * l * l;
+    }
+    void print() {
+        cout << "Area of Cube: " << area(length) << endl;
+    }
+};
+
+
+int main() {
+    
+    shape *s1 = new rectangle(20.1, 25.2);
+    shape *s2 = new cube(20.1321);
+    
+    s1->print();
+    s2->print();
+    
+    return 0;
+}
+/*
+Output:
+--------------------------------------
+Area of rectangle: 506.52
+Area of Cube: 8159.57
+--------------------------------------
+*/
+
 
 
