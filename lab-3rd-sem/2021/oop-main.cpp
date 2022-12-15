@@ -8,7 +8,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 /*
-(oop-main-1) - Sopnil
+(oop-main-21) - Sopnil
 Question: Write a program that finds the volume of differernt shapes (like rectangle, cylinder,cude) using function overloading
 */
 #include <iostream>
@@ -60,7 +60,7 @@ Volume of Ractangle is-	64
 */
 
 /*
-(oop-main-2) - Sopnil
+(oop-main-22) - Sopnil
 Question: Write lab question 2 here
 */
 #include <iostream>
@@ -130,7 +130,7 @@ Time after addition: 12:46
 
 
 /*
-(oop-main-3) - Sopnil
+(oop-main-23) - Sopnil
 Question: Write lab question 3 here
 */
 #include <iostream>
@@ -186,7 +186,7 @@ Sum of two complex numbers is 5+9i
 */
 
 /*
-(oop-main-4) - Sopnil
+(oop-main-24) - Sopnil
 Question: Write lab question 4 here
 */
 #include <iostream>
@@ -248,7 +248,7 @@ num1 is maximum
 */
 
 /*
-(oop-main-5) - Sopnil
+(oop-main-25) - Sopnil
 Question: Write lab question 5 here
 */
 #include <cmath>
@@ -339,7 +339,7 @@ Modify vector by cross production: 30i -15j -15k
 
 
 /*
-(oop-main-6) - Rizvy
+(oop-main-26) - Rizvy
 Question: Create a class float that contains one float data number. Overload all the four arithmetic operators for two objects
 */
 
@@ -408,7 +408,7 @@ Division: 1.92308
 */
 
 /*
-(oop-main-7) - Rizvy
+(oop-main-27) - Rizvy
 Question: Write lab question 7 here
 */
 #include <iostream>
@@ -461,7 +461,7 @@ Isosceles Area: 8.5701
 */
 
 /*
-(oop-main-8) - Rizvy
+(oop-main-28) - Rizvy
 Question: Write lab question 8 here
 */
 #include <iostream>
@@ -522,7 +522,7 @@ Area of Cube: 8159.57
 */
 
 /*
-(oop-main-9) - Rizvy
+(oop-main-29) - Rizvy
 Question: Write a program to read two files simultaneously.
 */
 #include <iostream>
@@ -575,7 +575,7 @@ Gaz, 5, 80
 */
 
 /*
-(oop-main-10) - Rizvy
+(oop-main-30) - Rizvy
 Question: Write lab question here
 */
 #include <iostream>
