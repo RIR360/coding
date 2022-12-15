@@ -394,7 +394,7 @@ int main()
     else if(division>=2.25 && division<=2.99)
         cout<<"The Division   : 2nd Division"<<endl;
     else if(division>=2.00 && division<=2.24)
-        cout<<"The Division   : 3nd Division"<<endl;
+        cout<<"The Division   : 3rd Division"<<endl;
     else cout<<"The Division   : Fail"<<endl;
   
     return 0;
