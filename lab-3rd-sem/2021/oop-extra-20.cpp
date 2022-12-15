@@ -83,7 +83,7 @@ Enter 4 numbers: 1 2 3 4
 
 /*
 (oop-extra-3) - Rizvy
-Question: Write a c++ program to find the biggest number among four values taken from user
+Question: Write a c++ program to search an element in an user given array of numbers
 */
 #include <iostream>
 using namespace std;
