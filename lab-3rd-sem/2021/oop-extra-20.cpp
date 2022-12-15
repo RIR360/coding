@@ -253,14 +253,14 @@ int main() {
   for (i = 0; i < n; i++) {
     
     int letter = int(str[i]);
-    if (letter >= 97)
-      cout << char(letter - 32);
-    else 
+    if (letter >= 65 && letter <= 90)
       cout << char(letter + 32);
+    else if (letter >= 97 && letter <= 122)
+      cout << char(letter - 32);
+    else cout << char(letter);
     
   }
   
-
   return 0;
 }
 
@@ -816,15 +816,14 @@ Question: Write a program in C++ to print Floyd’s Triangle by using the friend
 using namespace std;
 class Floyds
 {
+	int i,j,p,q,n;
 	public:
-		int i,j,p,q,n;
-		public:
 		int getRow()
 		{
 			cout<<"enter no.of rows: ";
 			cin>>n;
 		}
-		friend int show(Floyds);
+		friend int visualize(Floyds);
 };
 
 int visualize(Floyds a)
