@@ -345,7 +345,6 @@ Modify vector by cross production: -2i + 2j -2k
 (oop-main-26) - Rizvy
 Question: Create a class float that contains one float data number. Overload all the four arithmetic operators for two objects
 */
-
 #include <iostream>
 using namespace std;
 
@@ -381,8 +380,13 @@ class Float {
 
 int main()
 {
-    Float f1 = Float(2.5);
-    Float f2 = Float(1.3);
+    float a, b;
+    
+    cout << "Enter two float values: ";
+    cin >> a >> b;
+    
+    Float f1 = Float(a);
+    Float f2 = Float(b);
     Float f3;
     
     f3 = f1 + f2;
@@ -403,10 +407,11 @@ int main()
 /*
 Output:
 --------------------------------------
-Addition: 3.8
-Subtraction: 1.2
-Multiplication: 3.25
-Division: 1.92308
+Enter two float values: 3.4 2.5
+Addition: 5.9
+Subtraction: 0.9
+Multiplication: 8.5
+Division: 1.36
 --------------------------------------
 */
 
@@ -446,8 +451,13 @@ class isosceles : public area_cl {
 
 int main()
 {
-    rectangle a(3.234, 5.3);
-    isosceles b(3.234, 5.3);
+    double w, h;
+    
+    cout << "Enter width and height: ";
+    cin >> w >> h;
+    
+    rectangle a(w, h);
+    isosceles b(w, h);
     
     cout << "Rectangle Area: " << a.area() << endl;
     cout << "Isosceles Area: " << b.area() << endl;
@@ -458,10 +468,12 @@ int main()
 /*
 Output:
 --------------------------------------
-Rectangle Area: 17.1402
-Isosceles Area: 8.5701
+Enter width and height: 4.4 5.3
+Rectangle Area: 23.32
+Isosceles Area: 11.66
 --------------------------------------
 */
+
 
 /*
 (oop-main-28) - Rizvy
@@ -508,19 +520,30 @@ class cube : public shape {
 
 int main() {
     
-    shape *s1 = new rectangle(20.1, 25.2);
-    shape *s2 = new cube(20.1321);
+    double w, h, l;
+    
+    cout << "Enter reactangle width and height: ";
+    cin >> w >> h;
+    
+    cout << "Enter cube length: ";
+    cin >> l;
+    
+    shape *s1 = new rectangle(w, h);
+    shape *s2 = new cube(l);
     
     s1->print();
     s2->print();
     
     return 0;
 }
+
 /*
 Output:
 --------------------------------------
-Area of rectangle: 506.52
-Area of Cube: 8159.57
+Enter reactangle width and height: 6.4 8.2
+Enter cube length: 5.3
+Area of rectangle: 52.48
+Area of Cube: 148.877
 --------------------------------------
 */
 
