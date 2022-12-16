@@ -311,7 +311,16 @@ ostream &operator<<(ostream &out, const Vector &v)
 
 int main()
 {
-	Vector V1(3, 4, 2), V2(6, 3, 9);
+	int a, b, c;
+	
+	cout << "Enter vector1 (a, b, c): ";
+	cin >> a >> b >> c;
+	Vector V1(a, b, c);
+	
+	cout << "Enter vector2 (a, b, c): ";
+	cin >> a >> b >> c;
+	Vector V2(a, b, c);
+	
 	cout << "1st Vector = " << V1;
 	cout << "2nd Vector = " << V2;
 	cout << "Adding two Vectors = " << (V1 + V2);
@@ -322,10 +331,12 @@ int main()
 /*
 Output:
 --------------------------------------------
-1st Vector = 3i + 4j + 2k
-2nd Vector = 6i + 3j + 9k
-Adding two Vectors = 9i + 7j + 11k
-Modify vector by cross production: 30i -15j -15k
+Enter vector1 (a, b, c): 3 5 2
+Enter vector2 (a, b, c): 4 6 2
+1st Vector = 3i + 5j + 2k
+2nd Vector = 4i + 6j + 2k
+Adding two Vectors = 7i + 11j + 4k
+Modify vector by cross production: -2i + 2j -2k
 --------------------------------------------
 */
 
