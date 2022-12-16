@@ -192,58 +192,50 @@ Question: Write lab question 4 here
 #include <iostream>
 using namespace std;
 
-void findMaximum();
-
 class Number1
 {
-	int num1;
 	public:
-		Number1()
-		{
-			cout << "Please enter num1: ";
-			cin >> num1;
-		}
-
-	friend void findMaximum();
+	int num;
+	Number1()
+	{
+		cout << "Please enter an integer: ";
+		cin >> num;
+	}
 };
 
 class Number2
 {
-	int num2;
 	public:
-		Number2()
-		{
-			cout << "Please enter num2: ";
-			cin >> num2;
-		}
-
-	friend void findMaximum();
-};
-
-void findMaximum()
-{
-	Number1 n1;
-	Number2 n2;
-
-	if (n1.num1 > n2.num2)
+	int num;
+	Number2()
 	{
-		cout << "num1 is maximum";
+		cout << "Please enter an integer: ";
+		cin >> num;
 	}
-	else
-		cout << "num2 is maximum";
-}
+};
 
 int main()
 {
-	findMaximum();
-
+	Number1 n1;
+	Number2 n2;
+	if (n1.num > n2.num)
+	{
+		cout << n1.num << " is the largest.\n";
+		cout << n2.num << " is the smallest.\n";
+	}
+	else {
+		cout << n2.num << " is the largest.\n";
+		cout << n1.num << " is the smallest.\n";
+	}
+	return 0;
 }
 /*
 Output:
 --------------------------------------------
-Please enter num1: 4
-Please enter num2: 3
-num1 is maximum
+Please enter an integer: 23
+Please enter an integer: 63
+63 is the largest.
+23 is the smallest.
 --------------------------------------------
 */
 
