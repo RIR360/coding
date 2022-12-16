@@ -436,11 +436,11 @@ int main()
     
     for(i=0;i<len;i++){
         if(strRev[i]!=str[i]){
-            cout<<"The string is not a phalindrome!";
+            cout<<"The string is not a palindrome!";
             return 0;
         }
     }
-    cout<<"The string is a phalindrome!";
+    cout<<"The string is a palindrome!";
     return 0;
 }
 
@@ -448,10 +448,10 @@ int main()
 Output:
 --------------------------------------
 Enter a string: hello
-The string is not a phalindrome!
+The string is not a palindrome!
 
 Enter a string: moom
-The string is a phalindrome!
+The string is a palindrome!
 --------------------------------------
 */
 
@@ -469,7 +469,7 @@ int main() {
     max = (n1 > n2) ? n1 : n2;
     while(1){
         if(max%n1==0 && max%n2==0){
-            printf("The LCM of %d and %d is: %d",n1,n2,max);
+	    cout << "The LCM of " << n1 << " and " << n2 << " is: " << max << endl;
             break;
         }
         max++;
@@ -590,7 +590,7 @@ int main()
     cout<<"Enter a number: ";
     cin>>num;
     fact = factorial(num);
-    printf("The factorial of %d is: %d\n",num,fact);
+    cout << "The factorial of " << num << " is: " << fact << endl;
 }
 
 int factorial(int num){
@@ -746,10 +746,10 @@ void fibonacci(int n){
         cout<<"0 1 ";
     }
     else{
-        printf("0  1 ");
+	cout << "0  1 ";
         for(int i=1;i<n-1;i++)
         {
-            printf(" %d ",x+y);
+	    cout << " " << x + y << " ";
             z=y;
             y=x+y;
             x=z;
