@@ -364,20 +364,20 @@ int main()
 {
     int oop, ds, ode, fbs, ca, total;
     float percentage, division;
-    cout<<"Enter the marks of Object Oriented programming: ";
+    
+    cout << "Enter the marks of courses below. (0-100)\n";
+    cout<<"Object Oriented programming: ";
     cin>>oop;
     
-    cout<<"Enter the marks of Data Structure: ";
-    cin>>ds;
+    cout<<"Data Structure: "; cin>>ds;
     
-    cout<<"Enter the marks of Ordinary Differential Equation: ";
+    cout<<"Ordinary Differential Equation: ";
     cin>>ode;
     
-    cout<<"Enter the marks of Fundamental Of Business Studies: ";
+    cout<<"Fundamental Of Business Studies: ";
     cin>>fbs;
     
-    cout<<"Enter the marks of Computer Architecture: ";
-    cin>>ca;
+    cout<<"Computer Architecture: "; cin>>ca;
     
     total = oop + ds + ode + fbs + ca;
     percentage=total/500.0*100;
@@ -400,13 +400,14 @@ int main()
 /*
 Output:
 ------------------------------------------------------------
-Enter the marks of Object Oriented programming: 89
-Enter the marks of Data Structure: 89
-Enter the marks of Ordinary Differential Equation: 86
-Enter the marks of Fundamental Of Business Studies: 90
-Enter the marks of Computer Architecture: 88
-The total marks: 442
-The percentage :88.4 %
+Enter the marks of courses below. (0-100)
+Object Oriented programming: 89
+Data Structure: 88
+Ordinary Differential Equation: 85
+Fundamental Of Business Studies: 90
+Computer Architecture: 87
+The total marks: 439
+The percentage : 87.8 %
 The Division   : 1st Division
 ------------------------------------------------------------
 */
