@@ -529,7 +529,7 @@ int main() {
     cin >> h;
     
     shape *s1 = new rectangle(w, l);
-    rectangle *s2 = new cube(h);
+    shape *s2 = new cube(h);
     
     s1->print();
     s2->print();
