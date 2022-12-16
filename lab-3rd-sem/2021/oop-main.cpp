@@ -503,33 +503,33 @@ class rectangle : public shape {
 };
 
 
-class cube : public shape {
-    double length;
+class cube : public rectangle {
+    double height;
     public:
-    cube (double length) {
-        this->length = length;
+    cube (double height) : rectangle(height, height) {
+        this->height = height;
     }
-    double area(double l) {
-        return l * l * l;
+    double volume(double h) {
+        return h * h * h;
     }
     void print() {
-        cout << "Area of Cube: " << area(length) << endl;
+        cout << "Volume of Cube: " << volume(height) << endl;
     }
 };
 
 
 int main() {
     
-    double w, h, l;
+    double w, l, h;
     
-    cout << "Enter reactangle width and height: ";
-    cin >> w >> h;
+    cout << "Enter reactangle length and width: ";
+    cin >> l >> w;
     
-    cout << "Enter cube length: ";
-    cin >> l;
+    cout << "Enter cube height: ";
+    cin >> h;
     
-    shape *s1 = new rectangle(w, h);
-    shape *s2 = new cube(l);
+    shape *s1 = new rectangle(w, l);
+    rectangle *s2 = new cube(h);
     
     s1->print();
     s2->print();
