@@ -306,7 +306,7 @@ Output:
 Enter a number: 6
 The number is positive.
 
-Enter a number: 5
+Enter a number: -5
 The number is negative.
 
 Enter a number: 0
