@@ -24,77 +24,55 @@ Output:
 
 
 /*
-Question 3. Write a program to implement first pattern matching algorithm.
+Question 3.E Write a program to implement first pattern matching algorithm.
 */
 /*
 Algorithm:
 */
 // Source code:
-#include <stdio.h>
+#include <stdio.h> 
 #include <string.h>
 #define SIZE 1000
 
-int match(char [], char []);
-
-int main() {
+int main() 
+{ 
+    char text[SIZE],pat[SIZE];
+    int a = 0, b = 0, i, j;
     
-  char a[SIZE], b[SIZE];
-  int index;
-
-  printf("Enter text: ");
-  fgets(a, SIZE, stdin);
-
-  printf("Enter pattern to match: ");
-  fgets(b, SIZE, stdin);
-
-  index = match(a, b);
-
-  if (index != -1)
-    printf("Found at location: %d\n", index + 1);
-  else
-    printf("Pattern Not found.\n");
-
-  return 0;
-}
-
-int match(char text[], char pattern[]) {
+    printf("Enter the string : ");
+    fgets(text, SIZE, stdin);
+    printf("Enter the pattern to find : ");
+    fgets(pat, SIZE, stdin);
     
-  int i, j, k, text_l, pattern_l, index = -1;
-
-  text_l    = 0;
-  pattern_l = 0;
+    while(pat[a] != '\n') a++;
+    while(text[b] != '\n') b++;
   
-  while(text[text_l] != '\0') text_l++;
-  while(pattern[pattern_l] != '\0') pattern_l++;
+    for (i = 0; i <= b - a; i++) {
   
-  printf("%d, %d\n", text_l, pattern_l);
-
-  if (pattern_l > text_l) return -1;
-
-  for (i = 0; i <= text_l - pattern_l; i++) {
-      
-    index = k = i;
-    for (j = 0; j < pattern_l; j++) {
-      if (pattern[j] == text[k]) k++;
-      else break;
-    }
-    
-    if (j == pattern_l)
-      return index;
-    
-  }
-
-  return -1;
+        for (j = 0; j < a; j++) 
+            if (text[i + j] != pat[j]) 
+                break; 
+  
+        if (j == a) {
+            printf("Pattern found at position %d \n", i+1);
+            return 0;
+        }
+    } 
+    printf("Pattern not found\n");
+    return 0;
 }
 /*
 Output:
 ----------------------------------------------------------
-
+Enter the string : hello
+Enter the pattern to find : ll
+Pattern found at position 3
 ----------------------------------------------------------
 */
 
 
 /*
+-- NOT REVIEWED YET
 Question 5. Write a program to implement all major stack operations.
 */
 /*
@@ -152,6 +130,7 @@ Output:
 
 
 /*
+-- NOT REVIEWED YET
 Question 6. Write a program to implement all major queue operations.
 */
 /*
@@ -232,6 +211,7 @@ Output:
 
 
 /*
+-- NOT REVIEWED YET
 Question 7. Write a program to implement quick sort algorithm.
 */
 /*
@@ -313,12 +293,12 @@ int main() {
     printf("Enter your string: ");
     fgets(str, SIZE, stdin);
     
-    for (int i = 0; str[i] != '\0'; i++)
+    for (int i = 0; str[i] != '\n'; i++)
     {
         if (str[i]>='A' && str[i]<='Z') ch++;
         else if ((str[i]>='a' && str[i]<='z')) ch++;
         else if (str[i]>='0' && str[i]<='9') dg++;
-        else if (str[i] != '\n') sp++;
+        else sp++;
     }
     
     printf("Characters found: %d\n", ch);
