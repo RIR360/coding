@@ -7,8 +7,25 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ------------------------------------------------
 */
 
+
 /*
-Question 0. Write a program to 
+Question 1. Write a program to find the maximum and minimum values from a given array.
+*/
+/*
+Algorithm:
+*/
+// Source code:
+
+/*
+Output:
+----------------------------------------------------------
+
+----------------------------------------------------------
+*/
+
+
+/*
+Question 2. Write a program to search an element in an array using binary search algorithm.
 */
 /*
 Algorithm:
@@ -67,6 +84,22 @@ Output:
 Enter the string : hello
 Enter the pattern to find : ll
 Pattern found at position 3
+----------------------------------------------------------
+*/
+
+
+/*
+Question 4. Write a program that implements Tower of Hanoi problem by using a recursive function.
+*/
+/*
+Algorithm:
+*/
+// Source code:
+
+/*
+Output:
+----------------------------------------------------------
+
 ----------------------------------------------------------
 */
 
@@ -273,6 +306,68 @@ Output:
 */
 
 
+/*
+Question 8. Write a program to evaluate postfix notation expression.
+*/
+/*
+Algorithm:
+*/
+// Source code:
+
+/*
+Output:
+----------------------------------------------------------
+
+----------------------------------------------------------
+*/
+
+
+/*
+Question 9. Write a program to insert an element into a linked list.
+*/
+/*
+Algorithm:
+*/
+// Source code:
+
+/*
+Output:
+----------------------------------------------------------
+
+----------------------------------------------------------
+*/
+
+
+/*
+Question 10. Write a program to traverse a binary tree in any order.
+*/
+/*
+Algorithm:
+*/
+// Source code:
+
+/*
+Output:
+----------------------------------------------------------
+
+----------------------------------------------------------
+*/
+
+
+/*
+Question 11. Write a program to implement Minimum Spinning Tree (MST) by using Prims Algorithm.
+*/
+/*
+Algorithm:
+*/
+// Source code:
+
+/*
+Output:
+----------------------------------------------------------
+
+----------------------------------------------------------
+*/
 
 
 /*
