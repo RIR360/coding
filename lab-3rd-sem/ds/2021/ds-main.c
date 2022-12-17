@@ -15,11 +15,43 @@ Question 1. Write a program to find the maximum and minimum values from a given 
 Algorithm:
 */
 // Source code:
+#include <stdio.h>
 
+int main()
+{
+    int i, n, min, max;
+    
+    printf("Enter size of the array: ");
+    scanf("%d", &n);
+    
+    int arr[n];
+    
+    printf("Enter elements in array: ");
+    for (i = 0; i < n; i++) {
+        scanf("%d", & arr[i]);
+    }
+    
+    min = max = arr[0];
+    
+    for(i = 0; i < n; i++) {
+      if (arr[i] < min)
+        min = arr[i];
+      else if (arr[i] > max)
+        max = arr[i];
+    }
+    
+    printf("Minimum: %d\n", min);
+    printf("Maximum: %d\n", max);
+    
+    return 0;
+}
 /*
 Output:
 ----------------------------------------------------------
-
+Enter size of the array: 6
+Enter elements in array: 2 5 3 7 8 9
+Minimum: 2
+Maximum: 9
 ----------------------------------------------------------
 */
 
@@ -31,17 +63,63 @@ Question 2. Write a program to search an element in an array using binary search
 Algorithm:
 */
 // Source code:
-
+#include <stdio.h>
+ 
+int binarySearch(int arr[], int l, int r, int x)
+{
+    if (r >= l) {
+        int mid = l + (r - l) / 2;
+        if (arr[mid] == x)
+            return mid;
+ 
+        if (arr[mid] > x)
+            return binarySearch(arr, l, mid - 1, x);
+ 
+        return binarySearch(arr, mid + 1, r, x);
+    }
+ 
+    return -1;
+}
+ 
+int main(void)
+{
+    
+    int i, n, item;
+    
+    printf("Enter size of a sorted array: ");
+    scanf("%d", &n);
+    
+    int arr[n];
+    
+    printf("Enter elements in array: ");
+    for (i = 0; i < n; i++) {
+        scanf("%d", & arr[i]);
+    }
+    
+    printf("Enter the item to search: ");
+    scanf("%d", &item);
+    
+    int index = binarySearch(arr, 0, n - 1, item);
+    
+    if (index == -1)
+        printf("Element is not present in array");
+    else
+        printf("Element is present at index %d", index + 1);
+    return 0;
+}
 /*
 Output:
 ----------------------------------------------------------
-
+Enter size of a sorted array: 5
+Enter elements in array: 12 32 45 67 86
+Enter the item to search: 45
+Element is present at index 3
 ----------------------------------------------------------
 */
 
 
 /*
-Question 3.E Write a program to implement first pattern matching algorithm.
+Question 3. Write a program to implement first pattern matching algorithm.
 */
 /*
 Algorithm:
@@ -96,10 +174,37 @@ Algorithm:
 */
 // Source code:
 
+#include <stdio.h>
+
+void tower_of_hanoi(int n, char from, char to, char aux) {
+  if (n == 1) {
+    printf("Move disk %d from rod %c to rod %c\n", n, from, to);
+  } else {
+    tower_of_hanoi(n-1, from, aux, to);
+    printf("Move disk %d from rod %c to rod %c\n", n, from, to);
+    tower_of_hanoi(n-1, aux, to, from);
+  }
+}
+
+int main()
+{
+  int n;
+  printf("Enter the disk numbers: ");
+  scanf("%d", &n);
+  tower_of_hanoi(n, 'A', 'C', 'B');
+  return 0;
+}
 /*
 Output:
 ----------------------------------------------------------
-
+Enter the disk numbers: 3
+Move disk 1 from rod A to rod C
+Move disk 2 from rod A to rod B
+Move disk 1 from rod C to rod B
+Move disk 3 from rod A to rod C
+Move disk 1 from rod B to rod A
+Move disk 2 from rod B to rod C
+Move disk 1 from rod A to rod C
 ----------------------------------------------------------
 */
 
