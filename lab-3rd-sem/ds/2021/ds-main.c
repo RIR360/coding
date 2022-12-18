@@ -12,9 +12,18 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Question 1. Write a program to find the maximum and minimum values from a given array.
 */
 /*
-Algorithm:
+Algorithm: - Sopnil
+1. [Initialize] set i = 0 and min = max = arr[0]
+2. Repeat step 3 to 5 until i < n:
+3. if arr[i] < min then:
+      min = arr[i]
+4. else:
+      max = arr[i]
+5. i = i + 1
+6. Write "Minimum: "+ min
+7. Write "Maximum: "+ max
 */
-// Source code:
+// Source code: - Rizvy
 #include <stdio.h>
 
 int main()
