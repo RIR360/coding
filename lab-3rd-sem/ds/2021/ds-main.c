@@ -72,7 +72,7 @@ Question 2. Write a program to search an element in an array using binary search
 /*
 Algorithm:
 */
-// Source code:
+// Source code: - Rizvy
 #include <stdio.h>
  
 int binarySearch(int arr[], int l, int r, int x)
@@ -91,7 +91,7 @@ int binarySearch(int arr[], int l, int r, int x)
     return -1;
 }
  
-int main(void)
+int main()
 {
     
     int i, n, item;
@@ -134,7 +134,7 @@ Question 3. Write a program to implement first pattern matching algorithm.
 /*
 Algorithm:
 */
-// Source code:
+// Source code: - Rizvy
 #include <stdio.h> 
 #include <string.h>
 #define SIZE 1000
@@ -182,7 +182,7 @@ Question 4. Write a program that implements Tower of Hanoi problem by using a re
 /*
 Algorithm:
 */
-// Source code:
+// Source code: - Rizvy
 
 #include <stdio.h>
 
@@ -226,7 +226,7 @@ Question 5. Write a program to implement all major stack operations.
 /*
 Algorithm:
 */
-// Source code:
+// Source code: - Sakif
 #include <stdio.h>
 #define CAPACITY 3
 
@@ -284,7 +284,7 @@ Question 6. Write a program to implement all major queue operations.
 /*
 Algorithm:
 */
-// Source code:
+// Source code: - Sakif
 #include<stdio.h>
 #include<stdbool.h>
 #define CAPACITY 5
@@ -365,7 +365,7 @@ Question 7. Write a program to implement quick sort algorithm.
 /*
 Algorithm:
 */
-// Source code:
+// Source code: - Sakif
 #include <stdio.h>
 
 void quickSort(int arr[40], int first, int last) {
@@ -459,7 +459,7 @@ Question 10. Write a program to traverse a binary tree in any order.
 /*
 Algorithm:
 */
-// Source code:
+// Source code: - Rizvy
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -555,23 +555,90 @@ Question 11. Write a program to implement Minimum Spinning Tree (MST) by using P
 /*
 Algorithm:
 */
-// Source code:
+// Source code: - Rizvy
+#include <limits.h>
+#include <stdbool.h>
+#include <stdio.h>
+#define V 5
+ 
+int minKey(int key[], bool mstSet[])
+{
+    int min = INT_MAX, min_index;
+ 
+    for (int v = 0; v < V; v++)
+        if (mstSet[v] == false && key[v] < min)
+            min = key[v], min_index = v;
+ 
+    return min_index;
+}
 
+int printMST(int parent[], int graph[V][V])
+{
+    printf("Edge \tWeight\n");
+    for (int i = 1; i < V; i++)
+        printf("%d - %d \t%d \n", parent[i], i,
+               graph[i][parent[i]]);
+}
+ 
+void primMST(int graph[V][V])
+{
+    int parent[V];
+    int key[V];
+    bool mstSet[V];
+ 
+    for (int i = 0; i < V; i++)
+        key[i] = INT_MAX, mstSet[i] = false;
+ 
+    key[0] = 0;
+    parent[0] = -1;
+ 
+    for (int count = 0; count < V - 1; count++) {
+        
+        int u = minKey(key, mstSet);
+        mstSet[u] = true;
+ 
+        for (int v = 0; v < V; v++)
+            if (graph[u][v] && mstSet[v] == false)
+                if (graph[u][v] < key[v])
+                    parent[v] = u, key[v] = graph[u][v];
+    }
+    
+    printMST(parent, graph);
+}
+
+int main()
+{
+    int graph[V][V] = {
+        { 0, 2, 0, 6, 0 },
+        { 2, 0, 3, 8, 5 },
+        { 0, 3, 0, 0, 7 },
+        { 6, 8, 0, 0, 9 },
+        { 0, 5, 7, 9, 0 }
+    };
+ 
+    primMST(graph);
+ 
+    return 0;
+}
 /*
 Output:
 ----------------------------------------------------------
-
+Edge 	      Weight
+0 - 1 	2 
+1 - 2 	3 
+0 - 3 	6 
+1 - 4 	5 
 ----------------------------------------------------------
 */
 
 
 /*
-Question 12. Write a program to find the maximum and minimum values from a given array.
+Question 12. Write a program that calculates the total number of characters, digits and special characters from a line of text.
 */
 /*
 Algorithm:
 */
-// Source code:
+// Source code: - Sakif
 #include <stdio.h>
 #define SIZE 1000
 
