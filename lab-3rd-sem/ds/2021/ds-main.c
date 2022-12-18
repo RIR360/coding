@@ -428,11 +428,71 @@ Question 8. Write a program to evaluate postfix notation expression.
 Algorithm:
 */
 // Source code:
+#include <stdio.h>
+#define STACK 1000
+#define SIZE 100
 
+int top = -1, stack[STACK];
+
+void push(int);
+int pop();
+int eval(char, int, int);
+
+int main ()
+{
+    char a[SIZE], ch;
+    int i,op1,op2,res,x;
+    
+    printf("Enter a postfix expression: ");
+    fgets(a, SIZE, stdin);
+    
+    for(i=0; a[i]!='\n'; i++) {
+        ch = a[i];
+        if (ch>='0' && ch<='9') {
+            push(((int) ch) - 48);
+        } else {
+            if (ch == ' ') continue;
+            else {
+                op2 = pop();
+                op1 = pop();
+                res = eval(ch, op1, op2);
+                push(res);
+            }
+        }
+    }
+    
+    x = pop();
+    printf("Evaluated value = %d\n", x);
+}
+
+void push (int n){
+    top++;
+    stack [top] = n;
+}
+
+int pop() {
+    int res;
+    res = stack[top];
+    top--;
+    return res;
+}
+
+int eval (char ch, int op1, int op2) {
+    switch (ch){
+      case '+' : return (op1+op2);
+      case '-' : return (op1-op2);
+      case '*' : return (op1*op2);
+      case '/' : return (op1/op2);
+      default:
+        printf("Unknown operator detected!\n");
+        return 0;
+    }
+}
 /*
 Output:
 ----------------------------------------------------------
-
+Enter a postfix expression: 5 3 1 - *
+Evaluated value = 10
 ----------------------------------------------------------
 */
 
