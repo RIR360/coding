@@ -427,7 +427,7 @@ Question 8. Write a program to evaluate postfix notation expression.
 /*
 Algorithm:
 */
-// Source code:
+// Source code: - Rizvy
 #include <stdio.h>
 #define STACK 1000
 #define SIZE 100
