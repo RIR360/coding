@@ -22,6 +22,7 @@ Algorithm: - Sopnil
 5. i = i + 1
 6. Write "Minimum: "+ min
 7. Write "Maximum: "+ max
+8. [Exit]
 */
 // Source code: - Rizvy
 #include <stdio.h>
