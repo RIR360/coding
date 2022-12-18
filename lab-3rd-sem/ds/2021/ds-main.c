@@ -212,57 +212,111 @@ Move disk 1 from rod A to rod C
 
 
 /*
--- NOT REVIEWED YET
 5. Write a program to implement all major stack operations.
 Algorithm:
 */
-// Source code: - Sakif
+// Source code: - Rizvy
 #include <stdio.h>
-#define CAPACITY 3
+#define CAPACITY 10
 
 int stack[CAPACITY];
 int top = -1;
 
+int isFull() {
+    if(top < CAPACITY - 1) return 0;
+    return 1;
+}
+
+int isEmpty() {
+    if(top >= 0) return 0;
+    return 1;
+}
+
 int push(int x) {
-    if (top < CAPACITY - 1) {
+    if (isFull()) {
+        printf("Stack Overflow!\n");
+    } else {
         top++;
         stack[top] = x;
-        printf("%d was pushed to stack\n", x);
-    } else {
-        printf("Stack is already full!\n");
     }
 }
 
-int pop() {
-    if (top >= 0) {
+void pop() {
+    if (isEmpty()) {
+        printf("Stack Underflow\n");
+    } else {
         int t = stack[top];
         top = top - 1;
-        printf("%d popped from stack\n", t);
-        return t;
     }
-    printf("Stack is empty\n");
-    return -1;
 }
 
 int peek() {
     if (top >= 0)
         return stack[top];
-    printf("Empty stack!");
-    return -1;
+    else return -1;
 }
 
+void showStack() {
+    int i;
+    printf("Stack: ");
+    for (i = 0; i < CAPACITY; i++) {
+        if (i <= top)
+            printf("%d ", stack[i]);
+        else printf(" _ ");
+    }
+    printf("\n");
+}
+
+
+
 int main() {
-    push(23);
-    push(34);
-    push(12);
-    pop();
-    push(53);
-    printf("Top element is %d\n", peek());
+    
+    int x, running = 1, choice;
+    push(10);
+    push(20);
+    push(30);
+    push(40);
+    showStack();
+    
+    printf("1 = Push\n2 = Pop\n3 = Peek\n0 = Exit\n");
+    
+    while(running) {
+        
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        
+        if(choice == 1) {
+            printf("Enter number to push: ");
+            scanf("%d", &x);
+            push(x);
+            showStack();
+        } else if(choice == 2) {
+            pop();
+            showStack();
+        } else if(choice == 3) {
+            printf("Peeking: %d\n", peek());
+        } else running = 0;
+        
+    }
+    
+    return 0;
 }
 /*
 Output:
 ----------------------------------------------------------
-
+Stack: 10 20 30 40  _  _  _  _  _  _ 
+1 = Push
+2 = Pop
+3 = Peek
+0 = Exit
+Enter your choice: 1
+Enter number to push: 50
+Stack: 10 20 30 40 50  _  _  _  _  _ 
+Enter your choice: 2
+Stack: 10 20 30 40  _  _  _  _  _  _ 
+Enter your choice: 3
+Peeking: 40
+Enter your choice: 0
 ----------------------------------------------------------
 */
 
