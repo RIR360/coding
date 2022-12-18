@@ -268,32 +268,29 @@ Output:
 
 
 /*
--- NOT REVIEWED YET
 6. Write a program to implement all major queue operations.
 Algorithm:
 */
 // Source code: - Sakif
 #include<stdio.h>
 #include<stdbool.h>
-#define CAPACITY 5
+#define CAPACITY 10
 
 int queue[CAPACITY];
 int front = 0, rear = -1, totalItem = 0;
 
-bool isFull(){
-    if(totalItem == CAPACITY){
-        return true;
-    }
+bool isFull() {
+    if(totalItem == CAPACITY) return true;
     return false;
 }
-bool isEmpty(){
-    if(totalItem == 0){
-        return true;
-    }
+
+bool isEmpty() {
+    if(totalItem == 0) return true;
     return false;
 }
-void addToQueue(int item){
-    if(isFull()){
+
+void enqueue(int item) {
+    if(isFull()) {
         printf("Sorry, the Queue is full.\n");
         return;
     }
@@ -302,8 +299,8 @@ void addToQueue(int item){
     totalItem++;
 }
 
-int rmFromQueue(){
-    if(isEmpty()){
+int dequeue() {
+    if(isEmpty()) {
         printf("Sorry, the Queue is empty.\n");
         return -1;
     }
@@ -314,40 +311,65 @@ int rmFromQueue(){
     return frontItem;
 }
 
-void showQueue(){
+void showQueue() {
     int i;
     printf("Queue: ");
-    for (i = 0; i < CAPACITY; i++){
-        printf("%d ", queue[i]);
+    for (i = 0; i < CAPACITY; i++) {
+        if (queue[i] != 0)
+            printf("%d ", queue[i]);
+        else printf(" _ ");
     }
     printf("\n");
 }
 
-int main(){
-    addToQueue(10);
-    addToQueue(20);
-    addToQueue(30);
-    addToQueue(40);
+int main() {
+    
+    int x, running = 1, choice;
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+    enqueue(40);
     showQueue();
-    addToQueue(50);
-    showQueue();
-    addToQueue(60);
-    printf("Removed %d from the queue\n", rmFromQueue());
-    showQueue();
-    addToQueue(60);
-    showQueue();
+    
+    printf("1 = Enqueue\n2 = Dequeue\n0 = Exit\n");
+    
+    while(running) {
+        
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        
+        if(choice == 1) {
+            printf("Enter number to Enqueue: ");
+            scanf("%d", &x);
+            enqueue(x);
+            showQueue();
+        } else if(choice == 2) {
+            dequeue();
+            showQueue();
+        } else running = 0;
+        
+    }
+    
     return 0;
 }
 /*
 Output:
 ----------------------------------------------------------
-
+Queue: 10 20 30 40  _  _  _  _  _  _ 
+1 = Enqueue
+2 = Dequeue
+0 = Exit
+Enter your choice: 1
+Enter number to Enqueue: 5
+Queue: 10 20 30 40 5  _  _  _  _  _ 
+Enter your choice: 2
+Queue:  _ 20 30 40 5  _  _  _  _  _ 
+Enter your choice: 0
 ----------------------------------------------------------
 */
 
 
 /*
--- NOT REVIEWED YET
 7. Write a program to implement quick sort algorithm.
 Algorithm:
 */
@@ -357,25 +379,25 @@ Algorithm:
 void quickSort(int arr[40], int first, int last) {
 
     int i, j, pivot, temp;
+    
     if (first < last) {
+        
         pivot = first;
         i = first;
         j = last;
+        
         while (i<j) {
-            while (arr[i]<= arr[pivot] && i<last) {
-                i++;
-            }
-            while (arr[j]>arr[pivot]) {
-                j--;
-            }
+            
+            while (arr[i]<= arr[pivot] && i<last) i++;
+            while (arr[j]>arr[pivot]) j--;
 
             if(i<j) {
                 temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
-            }
-            
+            }    
         }
+        
         temp = arr[pivot];
         arr[pivot] = arr[j];
         arr[j] = temp;
@@ -387,22 +409,27 @@ void quickSort(int arr[40], int first, int last) {
 int main() {
 
     int a[40], n, i;
+    
     printf("Enter the size of array: ");
     scanf("%d", &n);
+    
     printf("Enter the elements of array: ");
     for (i=0; i<n; i++)
         scanf("%d", &a[i]);
+        
     quickSort(a, 0, n-1);
     printf("Sorted array: ");
     for (i=0; i<n; i++)
         printf("%d ", a[i]);
+        
     return 0;
 }
-
 /*
 Output:
 ----------------------------------------------------------
-
+Enter the size of array: 5
+Enter the elements of array: 23 54 65 12 86
+Sorted array: 12 23 54 65 86 
 ----------------------------------------------------------
 */
 
@@ -482,11 +509,81 @@ Evaluated value = 10
 
 
 /*
+-- NOT COMPLETED YET
 9. Write a program to insert an element into a linked list.
 Algorithm:
 */
-// Source code:
+// Source code: - Rizvy
+#include <stdio.h>
+#include <stdlib.h>
 
+struct Node
+{
+  int data;
+  struct Node *next;
+};
+
+void push(struct Node** head_ref, int new_data)
+{
+    struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
+ 
+    new_node->data  = new_data;
+    new_node->next = *head_ref;
+    *head_ref    = new_node;
+}
+
+void insertAfter(struct Node** head_ref, int item, int new_data)
+{}
+
+void append(struct Node** head_ref, int new_data)
+{
+    struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
+ 
+    struct Node *last = *head_ref;
+    new_node->data  = new_data;
+    new_node->next = NULL;
+ 
+    if (*head_ref == NULL)
+    {
+       *head_ref = new_node;
+       return;
+    }
+ 
+    while (last->next != NULL)
+        last = last->next;
+
+    last->next = new_node;
+    return;
+}
+
+void printList(struct Node *node)
+{
+    printf("Linked List: ");
+    while (node != NULL)
+    {
+        printf("%d -> ", node->data);
+        node = node->next;
+    }
+    printf("X\n");
+}
+
+int main()
+{
+  struct Node* head = NULL;
+  int i, x, y;
+  
+  printf("Enter an element to append: ");
+  scanf("%d", &x);
+  append(&head, x);
+  printList(head);
+  
+  printf("Enter an element to push: ");
+  scanf("%d", &x);
+  push(&head, x);
+  printList(head);
+ 
+  return 0;
+}
 /*
 Output:
 ----------------------------------------------------------
