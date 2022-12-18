@@ -9,9 +9,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 /*
-Question 1. Write a program to find the maximum and minimum values from a given array.
-*/
-/*
+1. Write a program to find the maximum and minimum values from a given array.
 Algorithm: - Sopnil
 1. [Initialize] set i = 0 and min = max = arr[0]
 2. Repeat step 3 to 5 until i < n:
@@ -67,9 +65,7 @@ Maximum: 9
 
 
 /*
-Question 2. Write a program to search an element in an array using binary search algorithm.
-*/
-/*
+2. Write a program to search an element in an array using binary search algorithm.
 Algorithm:
 */
 // Source code: - Rizvy
@@ -129,9 +125,7 @@ Element is present at index 3
 
 
 /*
-Question 3. Write a program to implement first pattern matching algorithm.
-*/
-/*
+3. Write a program to implement first pattern matching algorithm.
 Algorithm:
 */
 // Source code: - Rizvy
@@ -177,9 +171,7 @@ Pattern found at position 3
 
 
 /*
-Question 4. Write a program that implements Tower of Hanoi problem by using a recursive function.
-*/
-/*
+4. Write a program that implements Tower of Hanoi problem by using a recursive function.
 Algorithm:
 */
 // Source code: - Rizvy
@@ -221,9 +213,7 @@ Move disk 1 from rod A to rod C
 
 /*
 -- NOT REVIEWED YET
-Question 5. Write a program to implement all major stack operations.
-*/
-/*
+5. Write a program to implement all major stack operations.
 Algorithm:
 */
 // Source code: - Sakif
@@ -279,9 +269,7 @@ Output:
 
 /*
 -- NOT REVIEWED YET
-Question 6. Write a program to implement all major queue operations.
-*/
-/*
+6. Write a program to implement all major queue operations.
 Algorithm:
 */
 // Source code: - Sakif
@@ -360,9 +348,7 @@ Output:
 
 /*
 -- NOT REVIEWED YET
-Question 7. Write a program to implement quick sort algorithm.
-*/
-/*
+7. Write a program to implement quick sort algorithm.
 Algorithm:
 */
 // Source code: - Sakif
@@ -422,9 +408,7 @@ Output:
 
 
 /*
-Question 8. Write a program to evaluate postfix notation expression.
-*/
-/*
+8. Write a program to evaluate postfix notation expression.
 Algorithm:
 */
 // Source code: - Rizvy
@@ -498,9 +482,7 @@ Evaluated value = 10
 
 
 /*
-Question 9. Write a program to insert an element into a linked list.
-*/
-/*
+9. Write a program to insert an element into a linked list.
 Algorithm:
 */
 // Source code:
@@ -514,9 +496,7 @@ Output:
 
 
 /*
-Question 10. Write a program to traverse a binary tree in any order.
-*/
-/*
+10. Write a program to traverse a binary tree in any order.
 Algorithm:
 */
 // Source code: - Rizvy
@@ -610,9 +590,7 @@ Postorder traversal
 
 
 /*
-Question 11. Write a program to implement Minimum Spinning Tree (MST) by using Prims Algorithm.
-*/
-/*
+11. Write a program to implement Minimum Spinning Tree (MST) by using Prims Algorithm.
 Algorithm:
 */
 // Source code: - Rizvy
@@ -693,9 +671,7 @@ Edge 	      Weight
 
 
 /*
-Question 12. Write a program that calculates the total number of characters, digits and special characters from a line of text.
-*/
-/*
+12. Write a program that calculates the total number of characters, digits and special characters from a line of text.
 Algorithm:
 */
 // Source code: - Sakif
