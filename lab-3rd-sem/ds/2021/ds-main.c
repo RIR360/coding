@@ -1,6 +1,6 @@
 /*
 ------------------------------------------------
-| Code is taken down!                          |
+| Follow the lab sample!                       |
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ------------------------------------------------
 */
